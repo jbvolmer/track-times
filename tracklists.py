@@ -1,12 +1,9 @@
 #! /usr/local/bin/python3
 
-# infinite chill / 2017
-
 import sys
 import argparse
 import datetime
 
-#inheritance. gets method and attributes from vehicle class
 class TrackTimes:
     def __init__(self, tracktimes_file, tracktitles_file, tracklist_file):
         """Return a new Truck object."""
