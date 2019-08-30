@@ -6,7 +6,6 @@ import datetime
 
 class TrackTimes:
     def __init__(self, tracktimes_file, tracktitles_file, tracklist_file):
-        """Return a new Truck object."""
         self.tracktimes_file = tracktimes_file
         self.tracktitles_file = tracktitles_file
         self.tracklist_file = tracklist_file
@@ -60,10 +59,6 @@ class TrackTimes:
             file.write(track_name.rstrip())
             file.write(" - %d:%d:%d \n" % (h,m,s))
         file.close()
-
-
-
-
             
 def main():
     parser = argparse.ArgumentParser()
@@ -71,12 +66,8 @@ def main():
     parser.add_argument('tracktitles', help='input trackttiles file')
     parser.add_argument('tracklist', help='output tracklist file')
     args = parser.parse_args()
-
     myTrackTimes=TrackTimes(args.tracktimes,args.tracktitles,args.tracklist)
     myTrackTimes.generate_tracklist()
 
-
-
 if __name__ == '__main__':
-
     main()
